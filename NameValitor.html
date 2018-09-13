@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neme</title>
+</head>
+<body>
+<h1 align="center">Class name smart checker</h1>
+<p align="center"><input type="text" id="input" value=""></p>
+<script>
+    let reg =/^[APC][0-9]{4}[GHIKLM]/;
+    document.getElementById("input").addEventListener("keydown",function (e) {
+        if(e.key ==="Enter"){
+            if (reg.test(document.getElementById("input").value)){
+                alert("Tên hợp lệ");
+            }else {
+                alert("Tên không hợp lệ ");
+            }
+            document.getElementById("input").value = "";
+        }
+    })
+</script>
+</body>
+</html>
